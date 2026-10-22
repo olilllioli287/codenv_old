@@ -1,7 +1,10 @@
+【已停止維護】codenv 改成「AI 工作台」App，新版在 https://github.com/olilllioli287/codenv
+這份是舊版的說明，之後不再更新。
+
 codenv 程式練習環境(macOS)
 vim 寫程式、按 F10 看執行結果;畫面可選兩格或三格(三格多一格放 AI 或終端機)
-圖文版網站:https://olilllioli287.github.io/codenv/
-GitHub:https://github.com/olilllioli287/codenv
+圖文版網站:https://olilllioli287.github.io/codenv_old/
+GitHub:https://github.com/olilllioli287/codenv_old
 
 
 ======================================================================
@@ -10,7 +13,7 @@ GitHub:https://github.com/olilllioli287/codenv
 
  1. 打開「終端機」:按 Cmd + 空白鍵,輸入「終端機」或 Terminal,按 Enter。
  2. 貼上這一整行,按 Enter:
-        zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+        zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
  3. 出現 Password: 時輸入開機密碼(畫面不會顯示任何字),按 Enter。只要輸入這一次。
  4. 什麼都不用按,等它自己把 Homebrew、編譯器、tmux、iTerm2 和 codenv 一項一項裝好
     (第一次大約 15~40 分鐘,已經裝過的會跳過)。畫面會顯示 [1/5] 到 [5/5] 做到哪裡。
@@ -118,7 +121,7 @@ GitHub:https://github.com/olilllioli287/codenv
 必須先完成:第 1~4 步。這一步要在 iTerm 裡做。
 
  1. 在 iTerm 貼上這一整行,按 Enter:
-        zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+        zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
  2. 看到這幾行就成功了:
         已安裝 ~/.vimrc
         已安裝 ~/.tmux.conf
@@ -224,15 +227,15 @@ MacBook 最上面那排鍵預設是調亮度、音量。直接按 F10 其實是�
   codenv root            換程式資料夾(也可以直接打 codenv root ~/Documents/作業)
   codenv doctor          F9、F10 沒反應時先跑這個:檢查編譯器、設定、鍵盤,再請你按一下 F10
   解除安裝:
-    zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/uninstall.sh)"
+    zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/uninstall.sh)"
     codenv 的檔案會移到 ~/codenv-removed-日期時間(不直接刪),你寫的程式、Homebrew、
     tmux、iTerm2 都不會動。想恢復就再執行一次安裝的那一行。
   第一次安裝就想指定程式資料夾:
-    CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+    CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 
 
 ======================================================================
 遇到問題
 ======================================================================
-到 https://github.com/olilllioli287/codenv/issues 按 New issue,
+到 https://github.com/olilllioli287/codenv_old/issues 按 New issue,
 寫下你做了什麼、看到什麼,可以直接貼上截圖。

@@ -3,7 +3,7 @@
 #   會移走:~/.codenv.zsh、~/.codenv-ime、~/.codenv-compat、~/.codenv-kit,以及 codenv 裝的 ~/.vimrc、~/.tmux.conf
 #   會恢復:裝 codenv 之前原本的 ~/.vimrc、~/.tmux.conf(安裝時備份成 .bak-日期時間 的那份)
 #   不會動:你寫的程式(程式資料夾整個留著),Homebrew、編譯器、tmux、iTerm2(別的程式可能也在用)
-# 用法: zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/uninstall.sh)"
+# 用法: zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/uninstall.sh)"
 stamp=$(date +%Y%m%d-%H%M%S)
 out=~/codenv-removed-$stamp
 

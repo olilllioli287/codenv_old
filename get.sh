@@ -3,10 +3,10 @@
 #   1. Homebrew(沒有編譯器 Command Line Tools 的話,Homebrew 的安裝程式會順便裝)
 #   2. 編譯器(Homebrew 已經有、編譯器卻不見的少見情況才在這裡裝)
 #   3. tmux   4. iTerm2   5. codenv 的設定(下載到 ~/.codenv-kit,再執行裡面的 install.sh)
-# 用法: zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+# 用法: zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 # 在 Mac 內建的「終端機」或 iTerm 裡執行都可以
 # 自己 fork 一份來改的話,把下面這行改成自己的「帳號/repo 名稱」
-repo=olilllioli287/codenv
+repo=olilllioli287/codenv_old
 kit=~/.codenv-kit
 
 # 測試用:CODENV_DRYRUN=1 只印出要做的事;CODENV_PRETEND_MISSING="brew clt tmux iterm" 假裝這些還沒裝
@@ -31,7 +31,7 @@ fail() {
   print ""
   print "  $1"
   print "  可以照網站「新手上路」的手動步驟補裝,再執行一次這行,就會從沒裝好的地方接著做:"
-  print "  https://olilllioli287.github.io/codenv/#start"
+  print "  https://olilllioli287.github.io/codenv_old/#start"
   exit 1
 }
 

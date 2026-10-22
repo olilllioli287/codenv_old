@@ -7,6 +7,7 @@
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 </head>
 <body>
+<div style="background:#fff4d6;color:#5a4300;padding:10px 16px;font-size:15px;border-bottom:1px solid #e6c96b">已停止維護：codenv 改成「AI 工作台」App，新版在 <a href="https://github.com/olilllioli287/codenv">olilllioli287/codenv</a>。這裡是舊版的說明，之後不再更新。</div>
 <title>codenv 安裝手冊</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -222,7 +223,7 @@ footer { border-top: 1px solid var(--line); }
     <div class="cta">
       <a class="btn primary" href="#start">新手上路：從零開始安裝</a>
       <a class="btn" href="#download">已經有工具：一行安裝</a>
-      <a class="btn" href="https://github.com/olilllioli287/codenv">GitHub</a>
+      <a class="btn" href="https://github.com/olilllioli287/codenv_old">GitHub</a>
     </div>
     <img class="shot" src="layouts.png" width="1200" height="470" alt="兩種畫面：兩格是左邊 vim 寫程式、右邊 F10 執行結果；三格是左邊 AI 或終端機、右上 vim、右下執行結果">
   </div>
@@ -250,7 +251,7 @@ footer { border-top: 1px solid var(--line); }
     <div class="block" id="dl-install">
       <h2>一行安裝</h2>
       <p>在內建的「終端機」或 iTerm 執行下面這一行。缺 Homebrew、編譯器、tmux、iTerm2 的話會先自動裝好（第一次要輸入一次開機密碼，大約 15～40 分鐘），再從 GitHub 下載最新版的 codenv，放在 <code>~/.codenv-kit</code> 並安裝。一步一步的說明見<a href="#start-auto">新手上路</a>。</p>
-      <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"</pre><button type="button">複製</button></div>
+      <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"</pre><button type="button">複製</button></div>
       <div class="expect"><span class="label">看到類似這樣就成功</span>
 <pre class="out"><span class="dim">codenv 安裝:缺什麼就裝什麼,已經有的會跳過
   Homebrew、編譯器、tmux、iTerm2 都已經裝好了,直接更新 codenv 的設定
@@ -269,7 +270,7 @@ footer { border-top: 1px solid var(--line); }
 完成。關掉 iTerm(Cmd+Q)重開,輸入 codenv 就能使用</pre></div>
       <p>原本就有的 <code>~/.vimrc</code>、<code>~/.tmux.conf</code> 會先備份成「檔名.bak-日期時間」，不會不見。</p>
       <p><b>程式要放在哪個資料夾</b>：第一次安裝時會問，直接按 <kbd>Enter</kbd> 就是 <code>~/programming_language</code>。也可以在指令前面加上資料夾，一次指定好：</p>
-      <div class="cmd"><pre>CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"</pre><button type="button">複製</button></div>
+      <div class="cmd"><pre>CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"</pre><button type="button">複製</button></div>
       <p>之後想換，輸入 <code>codenv root</code>。</p>
     </div>
     <div class="block" id="dl-update">
@@ -280,14 +281,14 @@ footer { border-top: 1px solid var(--line); }
     <div class="block" id="dl-uninstall">
       <h2>解除安裝</h2>
       <p>執行下面這一行。codenv 的檔案會移到家目錄的 <code>codenv-removed-日期時間</code> 資料夾，不會直接刪掉；你寫的程式、Homebrew、tmux、iTerm2 都不會動。詳細說明見<a href="#manual-uninstall">使用手冊的解除安裝</a>。</p>
-      <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/uninstall.sh)"</pre><button type="button">複製</button></div>
+      <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/uninstall.sh)"</pre><button type="button">複製</button></div>
     </div>
     <div class="block" id="dl-other">
       <h2>其他下載方式</h2>
       <ul>
-        <li>原始碼：<a href="https://github.com/olilllioli287/codenv">github.com/olilllioli287/codenv</a></li>
-        <li>整包下載：<a href="https://github.com/olilllioli287/codenv/archive/refs/heads/main.zip">codenv-main.zip</a>。解壓縮後，在 iTerm 輸入 <code>zsh</code> 加一個空白，把資料夾裡的 <code>install.sh</code> 拖進視窗，按 Enter。</li>
-        <li>純文字版安裝說明（可以離線看）：<a href="https://github.com/olilllioli287/codenv/blob/main/%E8%AA%AA%E6%98%8E.txt">說明.txt</a></li>
+        <li>原始碼：<a href="https://github.com/olilllioli287/codenv_old">github.com/olilllioli287/codenv_old</a></li>
+        <li>整包下載：<a href="https://github.com/olilllioli287/codenv_old/archive/refs/heads/main.zip">codenv-main.zip</a>。解壓縮後，在 iTerm 輸入 <code>zsh</code> 加一個空白，把資料夾裡的 <code>install.sh</code> 拖進視窗，按 Enter。</li>
+        <li>純文字版安裝說明（可以離線看）：<a href="https://github.com/olilllioli287/codenv_old/blob/main/%E8%AA%AA%E6%98%8E.txt">說明.txt</a></li>
       </ul>
     </div>
     <div class="block" id="dl-github">
@@ -298,7 +299,7 @@ footer { border-top: 1px solid var(--line); }
         <tbody>
           <tr><td>綠色的 <b>Code</b> 按鈕</td><td>按下去選 <b>Download ZIP</b>，下載整個專案目前的最新版</td><td>沒辦法用一行安裝時才需要</td></tr>
           <tr><td>右邊的 <b>Releases</b></td><td>作者打包好的正式版本，一個版本一個，附更新說明和下載檔</td><td>codenv 沒有使用 Releases，一行安裝永遠拿最新版；版本紀錄看<a href="#changelog">發行日誌</a></td></tr>
-          <tr><td>上方的 <b>Issues</b> 分頁</td><td>回報問題、提建議的地方</td><td>遇到 bug 就到<a href="https://github.com/olilllioli287/codenv/issues">這裡</a>按 New issue</td></tr>
+          <tr><td>上方的 <b>Issues</b> 分頁</td><td>回報問題、提建議的地方</td><td>遇到 bug 就到<a href="https://github.com/olilllioli287/codenv_old/issues">這裡</a>按 New issue</td></tr>
         </tbody>
       </table></div>
       <p>專案的使用授權寫在檔案列表裡的 <code>LICENSE</code>，以及右邊的 About 欄位。codenv 是 MIT 授權，可以自由下載、修改成自己的習慣，詳見<a href="#manual-custom">使用手冊的「改成自己的習慣」</a>。</p>
@@ -338,8 +339,8 @@ footer { border-top: 1px solid var(--line); }
     <p class="lede">codenv 免費、開放原始碼（MIT 授權），沒有收費或捐款管道。想幫忙的話，下面這些事最有用。</p>
   </div>
   <div class="features">
-    <div class="feature" id="support-bug"><b>回報問題</b><p>遇到 bug 或看不懂的地方，到 <a href="https://github.com/olilllioli287/codenv/issues">GitHub Issues</a> 按 New issue，寫下你做了什麼、看到什麼，可以直接貼截圖（需要 GitHub 帳號）。</p></div>
-    <div class="feature"><b>給一顆星</b><p>在 <a href="https://github.com/olilllioli287/codenv">GitHub 頁面</a>右上角按 Star，讓更多同學找得到。</p></div>
+    <div class="feature" id="support-bug"><b>回報問題</b><p>遇到 bug 或看不懂的地方，到 <a href="https://github.com/olilllioli287/codenv_old/issues">GitHub Issues</a> 按 New issue，寫下你做了什麼、看到什麼，可以直接貼截圖（需要 GitHub 帳號）。</p></div>
+    <div class="feature"><b>給一顆星</b><p>在 <a href="https://github.com/olilllioli287/codenv_old">GitHub 頁面</a>右上角按 Star，讓更多同學找得到。</p></div>
     <div class="feature"><b>分享給同學</b><p>把這個網站的網址傳給也在寫作業的人。照著新手上路做，不用再找人一個一個幫忙裝。</p></div>
     <div class="feature"><b>一起改進</b><p>會改程式的話，歡迎直接修改後送 Pull Request；想到好用的功能，也可以開 Issue 提議。</p></div>
   </div>
@@ -609,7 +610,7 @@ footer { border-top: 1px solid var(--line); }
         <h2><span class="no">2</span>貼上一行，全部裝好</h2>
         <p class="step-meta">第一次 15～40 分鐘，大部分時間在下載</p>
         <p>在終端機貼上下面這一行，按 <kbd>Enter</kbd>：</p>
-        <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"</pre><button type="button">複製</button></div>
+        <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"</pre><button type="button">複製</button></div>
         <ol>
           <li>出現 <code>Password:</code> 時，輸入開機密碼，按 <kbd>Enter</kbd>。打字時畫面不會出現任何字，這是正常的。只要輸入這一次。</li>
           <li>之後什麼都不用按，等它一項一項裝完。畫面會顯示 <code>[1/5]</code> 到 <code>[5/5]</code> 做到哪裡。</li>
@@ -633,7 +634,7 @@ footer { border-top: 1px solid var(--line); }
 完成。
 
 接下來改用 iTerm:已經幫你打開了(在「應用程式」資料夾裡)。</pre></div>
-        <div class="note"><span class="label">中途停下來或出現錯誤</span><p>再執行一次同一行，已經裝好的會跳過，從沒裝好的地方接著做。還是不行，照最後面的<a href="#start-manual">手動安裝</a>一步一步補，或到 <a href="https://github.com/olilllioli287/codenv/issues">GitHub Issues</a> 附上截圖發問。</p></div>
+        <div class="note"><span class="label">中途停下來或出現錯誤</span><p>再執行一次同一行，已經裝好的會跳過，從沒裝好的地方接著做。還是不行，照最後面的<a href="#start-manual">手動安裝</a>一步一步補，或到 <a href="https://github.com/olilllioli287/codenv_old/issues">GitHub Issues</a> 附上截圖發問。</p></div>
         <div class="note"><span class="label">以後要更新</span><p>在 iTerm 執行同一行就好。工具都裝好了，所以只會更新 codenv 的設定，大約 1 分鐘。</p></div>
       </div>
 
@@ -733,7 +734,7 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"</pre><button type="button">複製<
         <h2>手動 4　安裝 codenv</h2>
         <p class="step-meta">約 1 分鐘，要在 iTerm 裡做</p>
         <p>在 <b>iTerm</b> 裡執行下面這一行。前面三步都裝好了，所以它只會從 GitHub 下載最新版的 codenv 並安裝：</p>
-        <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"</pre><button type="button">複製</button></div>
+        <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"</pre><button type="button">複製</button></div>
         <div class="expect"><span class="label">看到最後一行「完成」就成功</span>
 <pre class="out">已安裝 ~/.vimrc
 已安裝 ~/.tmux.conf
@@ -754,7 +755,7 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"</pre><button type="button">複製<
   <div class="page-head">
     <p class="eyebrow">FAQ</p>
     <h1>常見問題</h1>
-    <p class="lede">找不到答案的話，到 <a href="https://github.com/olilllioli287/codenv/issues">GitHub Issues</a> 發問，附上截圖會比較快找到原因。</p>
+    <p class="lede">找不到答案的話，到 <a href="https://github.com/olilllioli287/codenv_old/issues">GitHub Issues</a> 發問，附上截圖會比較快找到原因。</p>
   </div>
   <div class="doc">
     <nav class="toc" aria-label="常見問題目錄">
@@ -1187,7 +1188,7 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"</pre><button type="button">複製<
 - 語氣溫和、冷靜，像有耐心的學長姐。不要過度稱讚，也不要講空泛的鼓勵；使用者的理解有錯時，直接但友善地指出來。
 - 使用者看起來很累或說看不懂時，把步驟拆得更小、講得更短。</pre><button type="button">複製</button></div>
         <p>內容用「使用者」而不是「我、你」，是因為 Gemini 的匯入頁面要求用第三人稱。如果考試用的不是 Dev-C++，把那一句改成自己實際用的編輯器。</p>
-        <p><b>讓 AI 讀懂 codenv</b>：想問 AI 關於 codenv 的問題時，把這個網址給它：<code>https://raw.githubusercontent.com/olilllioli287/codenv/main/docs/guide.md</code>。這是整個網站的純文字版，AI 比較讀得懂。AI 連不上網的話，打開這個網址按 ⌘S 存成檔案，再上傳給它。</p>
+        <p><b>讓 AI 讀懂 codenv</b>：想問 AI 關於 codenv 的問題時，把這個網址給它：<code>https://raw.githubusercontent.com/olilllioli287/codenv_old/main/docs/guide.md</code>。這是整個網站的純文字版，AI 比較讀得懂。AI 連不上網的話，打開這個網址按 ⌘S 存成檔案，再上傳給它。</p>
         <p><b>ChatGPT、Claude 也能用</b>：貼到 ChatGPT 的「自訂指令」或 Claude 專案的「指示」欄位，效果一樣。</p>
         <div class="note"><span class="label">不要放個人資料</span><p>匯入的內容會存在服務商的紀錄裡，可能被拿去改進他們的服務。這段只寫了「新生、學 C++、希望怎麼被教」；自己加內容時，不要放名字、學號這類資料。</p></div>
         <p>還有一點：上機考不能用 AI，最後還是要自己會打。讓 AI 給提示、自己動手寫，比直接拿答案有用得多。</p>
@@ -1204,7 +1205,7 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"</pre><button type="button">複製<
       <div class="block" id="manual-uninstall">
         <h2><span class="no">15</span>解除安裝</h2>
         <p>在 iTerm（或內建的「終端機」）執行下面這一行：</p>
-        <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/uninstall.sh)"</pre><button type="button">複製</button></div>
+        <div class="cmd"><pre>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/uninstall.sh)"</pre><button type="button">複製</button></div>
         <ul>
           <li>codenv 的檔案（<code>~/.codenv.zsh</code>、<code>~/.codenv-ime</code>、<code>~/.codenv-compat</code>、<code>~/.codenv-kit</code>，以及 codenv 裝的 <code>~/.vimrc</code>、<code>~/.tmux.conf</code>）會移到家目錄的 <code>codenv-removed-日期時間</code> 資料夾，不會直接刪掉。</li>
           <li><code>~/.zshrc</code> 裡載入 codenv 的那行會拿掉（原本的檔案也備份在同一個資料夾）。</li>
@@ -1399,7 +1400,7 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"</pre><button type="button">複製<
   <div class="page-head">
     <p class="eyebrow">Technical Docs</p>
     <h1>技術文書</h1>
-    <p class="lede">給想知道 codenv 怎麼運作、或想自己修改的人。原始碼都在 <a href="https://github.com/olilllioli287/codenv">GitHub</a>。</p>
+    <p class="lede">給想知道 codenv 怎麼運作、或想自己修改的人。原始碼都在 <a href="https://github.com/olilllioli287/codenv_old">GitHub</a>。</p>
   </div>
   <div class="doc">
     <nav class="toc" aria-label="技術文書目錄">
@@ -1526,11 +1527,11 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"</pre><button type="button">複製<
 
       <div class="block" id="tech-license">
         <h2><span class="no">8</span>原始碼與授權</h2>
-        <p>原始碼在 <a href="https://github.com/olilllioli287/codenv">github.com/olilllioli287/codenv</a>，採用 MIT 授權：可以自由使用、修改、分享，只要保留原作者的著作權聲明（<code>LICENSE</code> 檔）。</p>
+        <p>原始碼在 <a href="https://github.com/olilllioli287/codenv_old">github.com/olilllioli287/codenv_old</a>，採用 MIT 授權：可以自由使用、修改、分享，只要保留原作者的著作權聲明（<code>LICENSE</code> 檔）。</p>
         <h3>fork 一份改成自己的版本</h3>
         <ol>
           <li>在 GitHub 的 codenv 頁面右上角按 <b>Fork</b>，複製一份到自己的帳號。</li>
-          <li>改自己那份裡的檔案，並把 <code>get.sh</code> 開頭的 <code>repo=olilllioli287/codenv</code> 改成自己的「帳號/repo 名稱」。</li>
+          <li>改自己那份裡的檔案，並把 <code>get.sh</code> 開頭的 <code>repo=olilllioli287/codenv_old</code> 改成自己的「帳號/repo 名稱」。</li>
           <li>之後安裝、更新都改用自己那份的網址：<code>zsh -c "$(curl -fsSL https://raw.githubusercontent.com/你的帳號/codenv/main/get.sh)"</code></li>
         </ol>
         <p>只是想調幾個小地方的話，不用 fork，寫在 <code>.local</code> 檔就好，見<a href="#manual-custom">使用手冊的「改成自己的習慣」</a>。</p>
@@ -1557,9 +1558,9 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"</pre><button type="button">複製<
 <footer>
   <div class="foot-in">
     <span>codenv · MIT License</span>
-    <a href="https://github.com/olilllioli287/codenv">GitHub</a>
-    <a href="https://github.com/olilllioli287/codenv/issues">回報問題</a>
-    <a href="https://raw.githubusercontent.com/olilllioli287/codenv/main/docs/guide.md">純文字版（給 AI 讀）</a>
+    <a href="https://github.com/olilllioli287/codenv_old">GitHub</a>
+    <a href="https://github.com/olilllioli287/codenv_old/issues">回報問題</a>
+    <a href="https://raw.githubusercontent.com/olilllioli287/codenv_old/main/docs/guide.md">純文字版（給 AI 讀）</a>
     <span>最後更新：2026-10-15</span>
   </div>
 </footer>

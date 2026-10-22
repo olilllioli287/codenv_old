@@ -1,4 +1,6 @@
-# codenv
+# codenv（舊版，已停止維護）
+
+> **已停止維護**：codenv 改成「AI 工作台」這個 App，新版在 [olilllioli287/codenv](https://github.com/olilllioli287/codenv)。這裡保留舊版（vim + tmux 的終端機環境）給還在用的人，之後不再更新。
 
 macOS 上寫 C++ / Python 作業用的終端機環境。輸入 `codenv` 選好檔案，畫面會切成兩格或三格（第一次使用時選，之後可以用 `codenv layout` 換）：
 
@@ -11,7 +13,7 @@ macOS 上寫 C++ / Python 作業用的終端機環境。輸入 `codenv` 選好�
 - 打 `(` `[` `"` 自動補上另一半，`{` 再按 Enter 自動補上 `}`；貼上程式碼縮排不會亂
 - 執行檔放在旁邊的 `bin` 資料夾，跟程式碼分開
 
-圖文版網站：https://olilllioli287.github.io/codenv/ （純文字版給 AI 讀：[docs/guide.md](docs/guide.md)）
+圖文版網站：https://olilllioli287.github.io/codenv_old/ （純文字版給 AI 讀：[docs/guide.md](docs/guide.md)）
 純文字版（可以下載離線看）：[說明.txt](說明.txt)
 
 ## 安裝
@@ -19,7 +21,7 @@ macOS 上寫 C++ / Python 作業用的終端機環境。輸入 `codenv` 選好�
 打開 Mac 內建的「終端機」（按 Cmd+空白鍵，輸入「終端機」，按 Enter），貼上這一行，按 Enter：
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 ```
 
 它會檢查並自動安裝缺少的東西，已經裝過的會跳過：
@@ -42,7 +44,7 @@ zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main
 **程式要放在哪個資料夾：** 第一次安裝時會問，直接按 Enter 就是 `~/programming_language`。也可以在指令前面加上資料夾一次指定好：
 
 ```
-CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 ```
 
 之後想換，輸入 `codenv root`。
@@ -111,7 +113,7 @@ brew install --cask iterm2
 在 **iTerm** 裡執行：
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 ```
 
 看到 `已安裝 ~/.vimrc`、`已安裝 ~/.tmux.conf`、`已安裝 ~/.codenv.zsh` 和最後的 `完成` 就成功了。按 Cmd+Q 完全關掉 iTerm 再打開。
@@ -167,7 +169,7 @@ zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main
 ## 解除安裝
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/uninstall.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/uninstall.sh)"
 ```
 
 codenv 的檔案會移到 `~/codenv-removed-日期時間`（不直接刪），`~/.zshrc` 裡載入 codenv 的那行會拿掉，裝 codenv 之前原本的 `~/.vimrc`、`~/.tmux.conf` 會放回去。你寫的程式、Homebrew、編譯器、tmux、iTerm2 都不會動。想恢復就再執行一次安裝的那一行。
@@ -176,4 +178,4 @@ codenv 的檔案會移到 `~/codenv-removed-日期時間`（不直接刪），`~
 
 F9、F10 沒反應：先在 iTerm 輸入 `codenv doctor`，它會檢查編譯器、tmux、vim 設定和鍵盤設定，再請你按一下 F10 測試。
 
-到 [Issues](https://github.com/olilllioli287/codenv/issues) 按 **New issue**，寫下你做了什麼、看到什麼，可以直接貼上截圖（需要 GitHub 帳號）。
+到 [Issues](https://github.com/olilllioli287/codenv_old/issues) 按 **New issue**，寫下你做了什麼、看到什麼，可以直接貼上截圖（需要 GitHub 帳號）。

@@ -1,7 +1,7 @@
 # codenv 完整說明（純文字版）
 
-> 這份檔案是 codenv 網站（https://olilllioli287.github.io/codenv/）的全部內容整理成的純文字，方便 AI 或離線閱讀。
-> 原始碼：https://github.com/olilllioli287/codenv
+> 這份檔案是 codenv 網站（https://olilllioli287.github.io/codenv_old/）的全部內容整理成的純文字，方便 AI 或離線閱讀。
+> 原始碼：https://github.com/olilllioli287/codenv_old
 
 
 ---
@@ -10,7 +10,7 @@ codenv_
 
 在 Mac 上寫 C++ / Python 作業的終端機環境。輸入 `codenv` 選好檔案，畫面就切成寫程式和看結果的兩格（或多一格放 AI）。按 F9 檢查、F10 執行，錯在哪一行直接標出來。
 
-新手上路：從零開始安裝 已經有工具：一行安裝 GitHub（https://github.com/olilllioli287/codenv）
+新手上路：從零開始安裝 已經有工具：一行安裝 GitHub（https://github.com/olilllioli287/codenv_old）
 
 （圖：兩種畫面：兩格是左邊 vim 寫程式、右邊 F10 執行結果；三格是左邊 AI 或終端機、右上 vim、右下執行結果）
 
@@ -63,7 +63,7 @@ Download
 在內建的「終端機」或 iTerm 執行下面這一行。缺 Homebrew、編譯器、tmux、iTerm2 的話會先自動裝好（第一次要輸入一次開機密碼，大約 15～40 分鐘），再從 GitHub 下載最新版的 codenv，放在 `~/.codenv-kit` 並安裝。一步一步的說明見新手上路。
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 ```
 
 看到類似這樣就成功
@@ -92,7 +92,7 @@ codenv 安裝:缺什麼就裝什麼,已經有的會跳過
 程式要放在哪個資料夾：第一次安裝時會問，直接按 [Enter] 就是 `~/programming_language`。也可以在指令前面加上資料夾，一次指定好：
 
 ```
-CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 ```
 
 之後想換，輸入 `codenv root`。
@@ -108,16 +108,16 @@ CODENV_ROOT=~/Documents/C++作業 zsh -c "$(curl -fsSL https://raw.githubusercon
 執行下面這一行。codenv 的檔案會移到家目錄的 `codenv-removed-日期時間` 資料夾，不會直接刪掉；你寫的程式、Homebrew、tmux、iTerm2 都不會動。詳細說明見使用手冊的解除安裝。
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/uninstall.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/uninstall.sh)"
 ```
 
 ## 其他下載方式
 
-- 原始碼：github.com/olilllioli287/codenv（https://github.com/olilllioli287/codenv）
+- 原始碼：github.com/olilllioli287/codenv_old（https://github.com/olilllioli287/codenv_old）
 
-- 整包下載：codenv-main.zip（https://github.com/olilllioli287/codenv/archive/refs/heads/main.zip）。解壓縮後，在 iTerm 輸入 `zsh` 加一個空白，把資料夾裡的 `install.sh` 拖進視窗，按 Enter。
+- 整包下載：codenv-main.zip（https://github.com/olilllioli287/codenv_old/archive/refs/heads/main.zip）。解壓縮後，在 iTerm 輸入 `zsh` 加一個空白，把資料夾裡的 `install.sh` 拖進視窗，按 Enter。
 
-- 純文字版安裝說明（可以離線看）：說明.txt（https://github.com/olilllioli287/codenv/blob/main/%E8%AA%AA%E6%98%8E.txt）
+- 純文字版安裝說明（可以離線看）：說明.txt（https://github.com/olilllioli287/codenv_old/blob/main/%E8%AA%AA%E6%98%8E.txt）
 
 ## 在 GitHub 上找下載
 
@@ -127,7 +127,7 @@ GitHub 上每個專案的頁面都長得差不多，要下載東西看這三個�
 | --- | --- | --- |
 | 綠色的 Code 按鈕 | 按下去選 Download ZIP，下載整個專案目前的最新版 | 沒辦法用一行安裝時才需要 |
 | 右邊的 Releases | 作者打包好的正式版本，一個版本一個，附更新說明和下載檔 | codenv 沒有使用 Releases，一行安裝永遠拿最新版；版本紀錄看發行日誌 |
-| 上方的 Issues 分頁 | 回報問題、提建議的地方 | 遇到 bug 就到這裡（https://github.com/olilllioli287/codenv/issues）按 New issue |
+| 上方的 Issues 分頁 | 回報問題、提建議的地方 | 遇到 bug 就到這裡（https://github.com/olilllioli287/codenv_old/issues）按 New issue |
 
 專案的使用授權寫在檔案列表裡的 `LICENSE`，以及右邊的 About 欄位。codenv 是 MIT 授權，可以自由下載、修改成自己的習慣，詳見使用手冊的「改成自己的習慣」。
 
@@ -168,11 +168,11 @@ codenv 免費、開放原始碼（MIT 授權），沒有收費或捐款管道。
 
 回報問題
 
-遇到 bug 或看不懂的地方，到 GitHub Issues（https://github.com/olilllioli287/codenv/issues） 按 New issue，寫下你做了什麼、看到什麼，可以直接貼截圖（需要 GitHub 帳號）。
+遇到 bug 或看不懂的地方，到 GitHub Issues（https://github.com/olilllioli287/codenv_old/issues） 按 New issue，寫下你做了什麼、看到什麼，可以直接貼截圖（需要 GitHub 帳號）。
 
 給一顆星
 
-在 GitHub 頁面（https://github.com/olilllioli287/codenv）右上角按 Star，讓更多同學找得到。
+在 GitHub 頁面（https://github.com/olilllioli287/codenv_old）右上角按 Star，讓更多同學找得到。
 
 分享給同學
 
@@ -453,7 +453,7 @@ Onboarding
 在終端機貼上下面這一行，按 [Enter]：
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 ```
 
 - 出現 `Password:` 時，輸入開機密碼，按 [Enter]。打字時畫面不會出現任何字，這是正常的。只要輸入這一次。
@@ -663,7 +663,7 @@ tmux 3.5a
 在 iTerm 裡執行下面這一行。前面三步都裝好了，所以它只會從 GitHub 下載最新版的 codenv 並安裝：
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/get.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/get.sh)"
 ```
 
 看到最後一行「完成」就成功
@@ -689,7 +689,7 @@ FAQ
 
 # 常見問題
 
-找不到答案的話，到 GitHub Issues（https://github.com/olilllioli287/codenv/issues） 發問，附上截圖會比較快找到原因。
+找不到答案的話，到 GitHub Issues（https://github.com/olilllioli287/codenv_old/issues） 發問，附上截圖會比較快找到原因。
 
 ## 安裝
 
@@ -1184,7 +1184,7 @@ touch ~/.vimrc.local && open -e ~/.vimrc.local
 
 內容用「使用者」而不是「我、你」，是因為 Gemini 的匯入頁面要求用第三人稱。如果考試用的不是 Dev-C++，把那一句改成自己實際用的編輯器。
 
-讓 AI 讀懂 codenv：想問 AI 關於 codenv 的問題時，把這個網址給它：`https://raw.githubusercontent.com/olilllioli287/codenv/main/docs/guide.md`。這是整個網站的純文字版，AI 比較讀得懂。AI 連不上網的話，打開這個網址按 ⌘S 存成檔案，再上傳給它。
+讓 AI 讀懂 codenv：想問 AI 關於 codenv 的問題時，把這個網址給它：`https://raw.githubusercontent.com/olilllioli287/codenv_old/main/docs/guide.md`。這是整個網站的純文字版，AI 比較讀得懂。AI 連不上網的話，打開這個網址按 ⌘S 存成檔案，再上傳給它。
 
 ChatGPT、Claude 也能用：貼到 ChatGPT 的「自訂指令」或 Claude 專案的「指示」欄位，效果一樣。
 
@@ -1217,7 +1217,7 @@ cp ~/.vimrc.bak-日期時間 ~/.vimrc
 在 iTerm（或內建的「終端機」）執行下面這一行：
 
 ```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv/main/uninstall.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/olilllioli287/codenv_old/main/uninstall.sh)"
 ```
 
 - codenv 的檔案（`~/.codenv.zsh`、`~/.codenv-ime`、`~/.codenv-compat`、`~/.codenv-kit`，以及 codenv 裝的 `~/.vimrc`、`~/.tmux.conf`）會移到家目錄的 `codenv-removed-日期時間` 資料夾，不會直接刪掉。
@@ -1417,7 +1417,7 @@ Technical Docs
 
 # 技術文書
 
-給想知道 codenv 怎麼運作、或想自己修改的人。原始碼都在 GitHub（https://github.com/olilllioli287/codenv）。
+給想知道 codenv 怎麼運作、或想自己修改的人。原始碼都在 GitHub（https://github.com/olilllioli287/codenv_old）。
 
 1
 
@@ -1555,13 +1555,13 @@ codenv 沒有用 TPM 之類的第三方外掛，全部的改動都寫在 `~/.tmu
 
 ## 原始碼與授權
 
-原始碼在 github.com/olilllioli287/codenv（https://github.com/olilllioli287/codenv），採用 MIT 授權：可以自由使用、修改、分享，只要保留原作者的著作權聲明（`LICENSE` 檔）。
+原始碼在 github.com/olilllioli287/codenv_old（https://github.com/olilllioli287/codenv_old），採用 MIT 授權：可以自由使用、修改、分享，只要保留原作者的著作權聲明（`LICENSE` 檔）。
 
 ### fork 一份改成自己的版本
 
 - 在 GitHub 的 codenv 頁面右上角按 Fork，複製一份到自己的帳號。
 
-- 改自己那份裡的檔案，並把 `get.sh` 開頭的 `repo=olilllioli287/codenv` 改成自己的「帳號/repo 名稱」。
+- 改自己那份裡的檔案，並把 `get.sh` 開頭的 `repo=olilllioli287/codenv_old` 改成自己的「帳號/repo 名稱」。
 
 - 之後安裝、更新都改用自己那份的網址：`zsh -c "$(curl -fsSL https://raw.githubusercontent.com/你的帳號/codenv/main/get.sh)"`
 
